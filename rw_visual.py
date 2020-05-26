@@ -10,10 +10,10 @@ while True:
 
     # Plot the points in the walk
     plt.style.use('classic')
-    fig, ax = plt.subplots(figsize=(10, 5), dpi=128)
+    fig, ax = plt.subplots(figsize=(11, 7), dpi=128)
     point_numbers = range(rw.num_points)
     ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, 
-        edgecolors='none', s=2)
+        edgecolors='none', s=3)
 
     # Emphasize the first and last points
     ax.scatter(0, 0, c='green', edgecolors='none', s=100)
@@ -23,6 +23,9 @@ while True:
     # Remove the axes
     ax.get_xaxis().set_visible(False)
     ax.get_yaxis().set_visible(False)
+
+    # Change background color for emphasis
+    ax.set_facecolor((0.85, 0.85, 0.85))
 
     plt.show()
 
